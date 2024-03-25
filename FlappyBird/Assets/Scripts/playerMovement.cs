@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject gameOver;
     public float jumpForce = 1f;
     public Rigidbody2D rb;
 
@@ -24,6 +25,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision​)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            this.enabled = false;
+            gameOver.SetActive(true);
         }
     }
 }
