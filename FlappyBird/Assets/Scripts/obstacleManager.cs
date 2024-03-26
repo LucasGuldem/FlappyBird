@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class obstacleManager : MonoBehaviour
 {
+    scoreManager scoreManager_;
+
     public GameObject obstacle_;
     float Cooldown;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreManager_ = FindObjectOfType<scoreManager>();
     }
 
     // Update is called once per frame
@@ -21,11 +24,11 @@ public class obstacleManager : MonoBehaviour
     }
 
     void obstacleCooldown() {
-        if (Cooldown <= 0 )
+        if (Cooldown <= 0f)
         {
             obstacleSpawn();
 
-            Cooldown = 3;
+            Cooldown = (3f - (scoreManager_.score_ / 10f));
         }
         else
         {
@@ -35,6 +38,6 @@ public class obstacleManager : MonoBehaviour
 
     void obstacleSpawn()
     {
-        Instantiate(obstacle_, new Vector3(5, Random.Range(-3, 3), 0), Quaternion.identity);
+        Instantiate(obstacle_, new Vector3(5f, Random.Range(-3f, 3f), 0f), Quaternion.identity);
     }
 }

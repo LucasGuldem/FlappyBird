@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 162669157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36452392, y: -0.5163659, z: -9.970174}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,6 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 652420176}
+  - component: {fileID: 652420177}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -551,6 +552,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652420177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652420175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe624a67fbfc01429c2e591f9313ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter_: {fileID: 2074964835}
+  score_: 0
 --- !u!1 &792498031
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1418544642}
-  jumpForce: 10
+  jumpForce: 5
   rb: {fileID: 792498035}
 --- !u!1 &1087835855
 GameObject:
@@ -1171,7 +1186,7 @@ GameObject:
   - component: {fileID: 2074964835}
   m_Layer: 5
   m_Name: Score
-  m_TagString: Untagged
+  m_TagString: Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1324,37 +1339,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1355430875900711186, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771065187963564825, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3135085483237314963, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4878881459429310476, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
       propertyPath: m_Name
       value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924251235278715783, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5924251235278715783, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8043612670730403896, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8043612670730403896, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8784152682176606072, guid: 55367fc5a75992440990b64ac66ad79b, type: 3}
       propertyPath: m_LocalPosition.x
